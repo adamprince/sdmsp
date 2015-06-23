@@ -40,6 +40,9 @@ input, select, textarea,
     padding: 0; }
   .sdmsp h2 {
     text-transform: none; }
+  .sdmsp #header .logo .brand {
+    background-image: url("../i/sdmsp-header-logo.png");
+    background-image: url("../i/sdmsp-header-logo.svg"); }
 
 .flex-video {
   height: 0;

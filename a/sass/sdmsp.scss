@@ -59,6 +59,11 @@ input, select, textarea,
     text-transform: none;
   }
 
+  #header .logo .brand {
+    background-image: url("../i/sdmsp-header-logo.png");
+    background-image: url("../i/sdmsp-header-logo.svg");
+  }
+
 }
 
 .flex-video {
