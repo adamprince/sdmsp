@@ -1,3 +1,6 @@
+#mfPreviewBar {
+  display: none; }
+
 /* Because the names are different, these override the selectors that use the Marianina typeface- for compatability with trial webfont service. This should likely be changed (or erased) before production. */
 h1.alt,
 h2,
@@ -63,11 +66,11 @@ input, select, textarea,
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #fffdeb;
   background-image: url("../i/sdmsp-bg-testimonial.png");
   background-position: 100% 100%;
   background-size: auto 100%;
-  background-color: #fffdeb;
-  border: 1px solid #fff59f;
+  border-top: 1px solid #fff59f;
   padding: 30px 40px;
   min-height: 325px; }
   @media only screen and (max-width: 767px) {
@@ -79,17 +82,23 @@ input, select, textarea,
     font-weight: normal;
     line-height: 1.4;
     margin: 0; }
+    #sdmsp-blockquote blockquote p:before {
+      content: '\201C'; }
+    #sdmsp-blockquote blockquote p:after {
+      content: '\201D'; }
     #sdmsp-blockquote blockquote footer {
-      font-size: 85%; }
+      font-size: 85%;
+      font-style: normal;
+      margin-bottom: 1em; }
       #sdmsp-blockquote blockquote footer:before {
         content: "\2014"; }
 
 @media only screen and (max-width: 767px) {
   #hero {
     height: 670px; } }
-#sdmsp-video {
+#sdmsp-video ul {
   font-size: 1.125em; }
-  #sdmsp-video li {
+  #sdmsp-video ul li {
     margin-bottom: 7px; }
 
 @media only screen and (min-width: 767px) {
@@ -97,7 +106,7 @@ input, select, textarea,
     font-size: 1.325em; } }
 #sdmsp-why .fa {
   color: #d0d0d0;
-  margin-right: 5px; }
+  margin-right: 7px; }
 
 #sdmsp-signup {
   -moz-background-size: cover;
@@ -105,13 +114,15 @@ input, select, textarea,
   -webkit-background-size: cover;
   background-size: cover;
   background-color: #0b79d9; }
-  #sdmsp-signup ol li {
-    counter-increment: step-counter;
-    list-style: none;
-    margin-left: -7px; }
-    #sdmsp-signup ol li:before {
-      color: white;
-      content: counter(step-counter);
-      margin-right: 7px; }
+  #sdmsp-signup ol {
+    font-size: 1.325em; }
+    #sdmsp-signup ol li {
+      counter-increment: step-counter;
+      list-style: none;
+      margin-left: -7px; }
+      #sdmsp-signup ol li:before {
+        color: white;
+        content: counter(step-counter);
+        margin-right: 7px; }
   #sdmsp-signup h2 {
     font-size: 4em; }

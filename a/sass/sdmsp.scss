@@ -2,6 +2,10 @@
 @import
   "compass";
 
+#mfPreviewBar {
+  display: none; // temporarily remove MyFonts preview bar
+}
+
 /* Because the names are different, these override the selectors that use the Marianina typeface- for compatability with trial webfont service. This should likely be changed (or erased) before production. */
 h1.alt,
 h2,
@@ -87,11 +91,11 @@ input, select, textarea,
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #fffdeb;
   background-image: url("../i/sdmsp-bg-testimonial.png");
   background-position: 100% 100%;
   background-size: auto 100%;
-  background-color: #fffdeb;
-  border: 1px solid darken(#fffdeb, 15%);
+  border-top: 1px solid darken(#fffdeb, 15%);
   padding: 30px 40px;
   min-height: 325px;
   @media only screen and (max-width: 767px) {
@@ -103,8 +107,16 @@ input, select, textarea,
     font-weight: normal;
     line-height: 1.4;
     margin: 0;
+    p:before {
+      content: '\201C';
+    }
+    p:after {
+      content: '\201D';
+    }
     footer {
       font-size: 85%;
+      font-style: normal;
+      margin-bottom: 1em;
       &:before {
         content: "\2014";
       }
@@ -112,7 +124,7 @@ input, select, textarea,
   }
 }
 
-//Override existing hero height
+//Override hero height
 @media only screen and (max-width: 767px) {
   #hero {
     height: 670px;
@@ -120,9 +132,11 @@ input, select, textarea,
 }
 
 #sdmsp-video {
-  font-size: 1.125em;
-  li {
-    margin-bottom: 7px;
+  ul {
+    font-size: 1.125em;
+    li {
+      margin-bottom: 7px;
+    }
   }
 }
 
@@ -134,7 +148,7 @@ input, select, textarea,
   }
   .fa {
     color: lighten(#444444, 55%);
-    margin-right: 5px;
+    margin-right: 7px;
   }
 }
 
@@ -142,6 +156,7 @@ input, select, textarea,
   @include background-size(cover);
   background-color: #0b79d9;
   ol {
+    font-size: 1.325em;
     li {
       counter-increment: step-counter;
       list-style: none;
